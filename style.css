@@ -1,0 +1,170 @@
+body {
+    background: linear-gradient(to right, #7DCCAD, #FFEA88);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+img {
+    height: 30px;
+}
+
+.logo {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #E63946;
+    font-style: italic;
+    font-family: "Flowmery-Regular";
+}
+
+@media (max-width: 600px) {
+    #main {
+        flex-direction: column;
+        margin: 15px 0;
+    } 
+}
+
+@font-face {
+    font-family: "Flowmery-Regular";
+    src: url(fonts/Flowmery-Regular.ttf);
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main {
+    display: flex;
+    /*justify-content: space-around;*/
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 100px;
+}
+
+.heart {
+    flex-shrink: 0;
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    transform: rotate(-45deg);
+    position: relative;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart::before {
+    top: -50px;
+    left: 0px;
+}
+
+.heart::after {
+    left: 50px;
+    top: 0px;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1)
+            rotate(-45deg);
+    }
+
+    25% {
+        transform: scale(1.25)
+            rotate(-45deg);
+    }
+
+    45% {
+        transform: scale(1.5)
+            rotate(-45deg);
+    }
+} 
+
+.heart {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    transform: rotate(-45deg);
+    position: relative;
+    animation: heartbeat 1s infinite;
+}
+
+input {
+    border: 4px solid lightpink;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    font-size: 15px;
+}
+
+label {
+    font-weight: bold;
+    text-decoration: underline;
+    text-transform: capitalize;
+    color: #4D6787;
+    font-size: 30px;
+}
+
+#btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    border: 4px solid #457B9D;
+    border-radius: 20px;
+    background-color: #E63946;
+    font-size: 20px;
+    color: white;
+}
+
+/*.menu {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 100px;
+    font-size: 20px;
+
+}*/
+
+/*#navbar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center; 
+    padding: 1rem 2rem;
+    border: 5px solid #E63946;
+    background-color: white;
+}*/
+
+#message {
+    font-size: 20px;
+    color: #8C56D4;
+    font-family: "Flowmery-Regular";
+}
+
+#name {
+    font-size: 30px;
+    color: #3A86FF;
+    font-family: "Flowmery-Regular";
+}
